@@ -43,6 +43,7 @@
             this.checkPers = new System.Windows.Forms.CheckBox();
             this.checkPhys = new System.Windows.Forms.CheckBox();
             this.checkItem = new System.Windows.Forms.CheckBox();
+            this.clipBoardBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             // 
             // mixButton
             // 
-            this.mixButton.Location = new System.Drawing.Point(470, 32);
+            this.mixButton.Location = new System.Drawing.Point(470, 14);
             this.mixButton.Name = "mixButton";
             this.mixButton.Size = new System.Drawing.Size(111, 39);
             this.mixButton.TabIndex = 13;
@@ -188,11 +189,22 @@
             this.checkItem.Text = "Lock item";
             this.checkItem.UseVisualStyleBackColor = true;
             // 
+            // clipBoardBtn
+            // 
+            this.clipBoardBtn.Location = new System.Drawing.Point(470, 59);
+            this.clipBoardBtn.Name = "clipBoardBtn";
+            this.clipBoardBtn.Size = new System.Drawing.Size(111, 39);
+            this.clipBoardBtn.TabIndex = 17;
+            this.clipBoardBtn.Text = "Copy to clipboard";
+            this.clipBoardBtn.UseVisualStyleBackColor = true;
+            this.clipBoardBtn.Click += new System.EventHandler(this.clipBoardBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 261);
+            this.Controls.Add(this.clipBoardBtn);
             this.Controls.Add(this.checkItem);
             this.Controls.Add(this.checkPers);
             this.Controls.Add(this.checkPhys);
@@ -233,6 +245,7 @@
         private System.Windows.Forms.CheckBox checkPers;
         private System.Windows.Forms.CheckBox checkPhys;
         private System.Windows.Forms.CheckBox checkItem;
+        private System.Windows.Forms.Button clipBoardBtn;
     }
 }
 

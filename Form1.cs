@@ -23,6 +23,11 @@ namespace NPCGen
 
         Random rand = new Random();
 
+        private void clipBoardBtn_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(resultText.Text);
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -91,7 +96,7 @@ namespace NPCGen
             if (!checkPers.Checked) persTrait = currentCulture.GetPersonalityTrait(randValPersonality);
             if (!checkItem.Checked) item = currentCulture.GetItem(randValItem);
 
-            resultText.Text = "A " + physTrait + " " + currentCulture.name + ", " + name + ", is the " + job + " who lives in " + home + ". This one carries " +item+" and is quite "+persTrait+".";
+            resultText.Text = physTrait + " " + currentCulture.name + ", " + name + ", " + job + " who lives in " + home + ". This one carries " +item+" and seems to be quite "+persTrait+".";
 
         }
 
